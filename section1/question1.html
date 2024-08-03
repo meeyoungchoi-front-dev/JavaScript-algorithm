@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세 수 중 최솟값</title>
+</head>
+<body>
+    <script>
+        function solution(a, b, c){
+            let answer = 0;
+            if (a > b) {
+                return answer = b;
+            } else if (b > c) {
+                return answer = c;
+            } else {
+                return answer = a;
+            }     
+        }
+
+        console.log(solution(2, 5, 1));
+    </script>
+</body>
+</html>
