@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function solution(a, b, c){
+        let answer = false;
+        let max = 0;
+       // 세수중 가장 큰 수를 찾는다
+       // 큰수를 제외한 나머지 두수의 합이 가장 큰수 보다 크면 삼각형이 될 수 있다
+       let sum = a + b + c;
+       if (a > b) {
+            max = a;
+       } else if (b > c) {
+            max = b
+       } else {
+            max = c
+       }
+
+       if ( (sum - max) > max) {
+          return answer = true;
+       } else {
+         return answer = false;
+       }
+    }
+
+    console.log(solution(13, 33, 17));
+</script>
+
+</body>
+</html>
