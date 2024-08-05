@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3.연필개수</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                let answer = 0;
+                let mock = n / 12
+                let least = n % 12
+                if (least == 0) {
+                    return answer = mock;
+                } else {
+                    return Math.ceil(mock + answer);
+                }
+            }
+
+            console.log(solution(178));
+        </script>
+    </body>
+</html>
