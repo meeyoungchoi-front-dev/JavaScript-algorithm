@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function solution(n){
-            let answer = 0;
-            for (let i = 1; i <= n; i++) {
-                answer += i;
-            }
-            return answer;
-        }
 
-        console.log(solution(6));
-    </script>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>4.최솟값 구하기</title>
+    </head>
+    <body>
+        <script>
+            let arr = [5,3, 7, 11, 2, 15,17];
+            let min = Number.MAX_SAFE_INTEGER;
+            let answer = 0;
+            function solution(arr){
+               for (let i = 0; i < arr.length; i++) {
+                    if (min > arr[i]) {
+                        min = arr[i];
+                    } 
+               }
+               return answer = min;
+            }
+            console.log(solution(arr));
+        </script>
+    </body>
 </html>
