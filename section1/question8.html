@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function solution(arr){
+            const sum = arr.reduce((acc, cur) => acc + cur, 0);
+            let answer = [];
+
+            for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                const partial_sum = arr[i] + arr[j];
+
+                if (sum - partial_sum === 100) {
+                answer = arr
+                    .filter((item) => item !== arr[i] && item !== arr[j])
+                    .sort((a, b) => a - b);
+                break;
+                }
+            }
+}
+           return answer;
+        }
+        
+        let arr=[22, 7, 21, 19, 10, 15, 25, 8, 13];
+        console.log(solution(arr));
+    </script>
+    
+</body>
+</html>
