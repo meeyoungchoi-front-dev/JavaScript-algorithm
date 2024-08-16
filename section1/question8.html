@@ -11,6 +11,7 @@
         function solution(arr){
             const sum = arr.reduce((acc, cur) => acc + cur, 0);
             let answer = [];
+            let flag = 0;
 
             for (let i = 0; i < arr.length; i++) {
             for (let j = i + 1; j < arr.length; j++) {
@@ -20,8 +21,12 @@
                 answer = arr
                     .filter((item) => item !== arr[i] && item !== arr[j])
                     .sort((a, b) => a - b);
+                flag = 1;    
                 break;
                 }
+            }
+            if (flag == 1) {
+                break;
             }
 }
            return answer;
