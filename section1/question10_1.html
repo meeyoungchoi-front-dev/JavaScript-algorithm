@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    function solution(s, t){
+        let answer=0;
+        for (let x  : s) {
+            if (s === t) {
+                answer += 1;
+            }
+        }
+        return answer;
+    }
+    
+    let str="COMPUTERPROGRAMMING";
+    console.log(solution(str, 'R'));
+</body>
+</html>
